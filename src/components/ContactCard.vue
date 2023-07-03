@@ -19,7 +19,7 @@ defineProps<IContactCardProps>();
     <h3 class="employee-name">
       {{ employee.first_name }} {{ employee.last_name }}
     </h3>
-    <p class="employee-contact">Contact</p>
+    <a :href="'mailto:' + employee.email" class="employee-contact"> Contact </a>
   </div>
 </template>
 
@@ -53,8 +53,12 @@ defineProps<IContactCardProps>();
   height: 100%;
   width: auto;
 }
-.employee-name,
+.employee-name {
+  margin: 0;
+}
 .employee-contact {
   margin: 0;
+  text-decoration: none;
+  color: inherit;
 }
 </style>
