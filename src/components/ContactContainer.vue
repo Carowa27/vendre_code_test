@@ -35,11 +35,8 @@ console.log(employees);
       ></ContactCard></div
   ></Suspense>
   <div class="pagenr-container">
-    <span class="pagenr" @click="changePage(1)">1</span>/<span
-      class="pagenr"
-      @click="changePage(2)"
-      >2</span
-    >
+    <span class="pagenr" @click="changePage(1)">1</span>&nbsp;
+    <span class="pagenr" @click="changePage(2)">2</span>
   </div>
 </template>
 

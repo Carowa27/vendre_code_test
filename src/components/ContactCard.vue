@@ -9,11 +9,13 @@ defineProps<IContactCardProps>();
 
 <template>
   <div class="employee-card">
-    <img
-      :src="employee.avatar"
-      :alt="employee.first_name"
-      class="employee-img"
-    />
+    <div class="image-container">
+      <img
+        :src="employee.avatar"
+        :alt="employee.first_name"
+        class="employee-img"
+      />
+    </div>
     <h3 class="employee-name">
       {{ employee.first_name }} {{ employee.last_name }}
     </h3>
@@ -28,22 +30,30 @@ defineProps<IContactCardProps>();
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem 3rem;
-  /* width: fit-content;
-  height: fit-content; */
+
   width: max-content;
   height: max-content;
+
+  padding: 1.5rem 3rem;
   border-radius: 10px;
   background-color: rgb(232, 232, 232);
 }
-.employee-img {
-  width: auto;
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 8rem;
   height: 8rem;
+
   border-radius: 50%;
+  overflow: hidden;
 }
-.employee-name {
-  margin: 0;
+.employee-img {
+  height: 100%;
+  width: auto;
 }
+.employee-name,
 .employee-contact {
   margin: 0;
 }
