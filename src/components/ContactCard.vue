@@ -34,7 +34,7 @@ defineProps<IContactCardProps>();
   width: max-content;
   height: max-content;
 
-  padding: 1.5rem 3rem;
+  padding: 1.5rem;
   border-radius: 10px;
   background-color: rgb(232, 232, 232);
 }
@@ -42,7 +42,7 @@ defineProps<IContactCardProps>();
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin: 0 1rem;
   width: 8rem;
   height: 8rem;
 

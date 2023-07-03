@@ -19,6 +19,7 @@ const changePage = async (n: number) => {
   } else {
     employees.value = await getData(`?page=${page.value}`);
   }
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 };
 
 console.log(employees);
