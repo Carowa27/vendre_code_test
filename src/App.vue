@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ContactContainer from "./components/ContactContainer.vue";
+</script>
 
 <template>
-  <div>Container</div>
+  <Suspense>
+    <ContactContainer> </ContactContainer>
+  </Suspense>
 </template>
 
 <style scoped></style>
